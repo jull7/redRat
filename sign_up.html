@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dashboard</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+
+<body>
+<div class="wpr_sign_up">
+	<div class="container">
+		<div class="row">
+			<div class="sign_up">
+			<form action="">
+				
+				<h3>Sign up</h3>
+			
+					<input type="text" id="name" placeholder="Name">
+					
+					<input type="text" id="last_name" placeholder="Last name">
+					
+					<input type="text" id="email" placeholder="Email">
+					
+					<input type="text" id="pass" placeholder="Password">
+
+					<input type="text" id="rep_pass" placeholder="Repeat password">
+					
+					<select name="country" id="country" placeholder="Country" class="form-control">
+						<option value="1">Ukraine</option>
+						<option value="2">France</option>
+						<option value="3">Poland</option>
+					</select>
+
+					<div class="conf">
+						<input type="checkbox" id="check_terms">
+						<p>Accept <a href="">terms of service</a> and <a href="/">privacy policy</a></p>
+					</div>
+					<input type="submit" value="SIGN UP">
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		cur_height = $('.bg-gr').height();
+		$('.sidebar').css('height', cur_height);
+	});
+
+</script>
+
+</body>
+</html>

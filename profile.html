@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dashboard</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+
+<body>
+<div class="wpr">
+	<div class="receive-popup col-md-3">
+		<h4>Receive</h4>
+		<h5>Address of your wallet:</h5>
+		<p>0x13a10704684537a56b0fb266b74d9c590d7b2294</p>
+		<img src="" alt="">
+		<br>
+		<span class="close">CLOSE</span>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<header>
+				<div class="nav-button hidden-md hidden-lg "><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+				<div class="col-xs-12 col-md-2">
+					<div class="logo"></div>
+				</div>
+				<div class="col-xs-7 col-md-offset-1 col-md-4">
+					<div class="balance-wrap">
+						<h5>YOUR BALANCE <span>134,725633</span></h5>
+						<div class="cash-v">EZC</div>
+					</div>
+				</div>
+				<div class="col-xs-5 col-md-offset-1 col-md-4">
+					<div class="user-btns">
+						<a href="" class="user">John Doe</a>
+						<a href="" class="user-rec active"><span>Recieve</span></a>
+					</div>
+				</div>
+			</header>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row bg-gr">
+			<div class="col-md-3 sidebar">
+				
+				<div class="col-md-11">
+					<ul class="side_mnu">
+						<li class="active" id="dash"><a href="index.html">Dashboard</a></li>
+						<li id="profile"><a href="profile.html">My Profile</a></li>
+						<li id="address_book"><a href="address_book.html">Address book</a></li>					
+					</ul>
+					<div class="clr"></div>
+
+					<ul class="side_mnu-abs">
+						<li id="log_out"><a href="/">Log out</a></li>
+					</ul>
+					
+				</div>
+				
+			</div>
+	
+			<div class="col-md-9">
+				<div class="main-cont">
+					<div class="col-md-12">
+						<div class="row tap">
+							
+								<ul class="nav nav-tabs" id="tabs">
+									<li class="active"><a href="#settings" data-toggle="tab">GENERAL SETTINGS</a></li>
+									<li><a href="#logs" data-toggle="tab">SESSION LOG</a></li>
+								</ul>
+
+						</div>
+					</div>
+
+					<!-- <div class="clr"></div> -->
+					
+					<div class="tab-content">
+						<div class="tab-pane fade in active" id="settings">
+							
+							<div class="clr"></div>
+							
+							<div class="row">
+								<div class="col-md-12">
+									<div class="warning">
+										<h5>Warning!</h5>
+										<p>Anti Money Laundering (AML) / Know Your Client (KYC) documents have not been provided or have not been verified. Untill such time that youprovided satisfactory AML/KYS documentation, you may only deposit, withraw and trade Digital Currencies.</p>
+										<div class="close-warn">&times;</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-12 col-md-4">
+									<div class="bl-cont">
+										<h4>Contact information</h4>
+										
+										<label for="email">Email*</label>
+										<input type="text" id="email">
+										<br>
+										<label for="mobile">Mobile*</label>
+										<input type="text" id="mobile">
+										<br>
+										<label for="name">Name*</label>
+										<input type="text" id="name">
+										<br>
+										<label for="last_name">Last name*</label>
+										<input type="text" id="last_name">
+										<br>
+										<label for="country">Country*</label>
+										<input type="text" id="country">
+										<br>
+										<label for="state">State</label>
+										<input type="text" id="state">
+										<br>
+										<input type="submit" value="SUBMIT">
+										
+									</div>
+								</div>
+
+								<div class="col-sm-12 col-md-4">
+									<div class="bl-cont">
+										<h4>Change password</h4>
+										
+										<label for="pass">Old password</label>
+										<input type="text" id="pass">
+										<br>
+										<label for="n_pass">New password</label>
+										<input type="text" id="n_pass">
+										<br>
+										<label for="rep_pass">Repeat new password</label>
+										<input type="text" id="rep_pass">
+										<br>
+										<input type="submit" value="SUBMIT">
+									</div>
+								</div>
+								
+								<div class="col-sm-12 col-md-4">
+									<div class="bl-cont n-bord">
+										<h4>Security Preferences</h4>
+										
+										<p class="rel_p">Enable/Disable Login <br>
+										OTP protection<input type="checkbox" id="secur_check"></p>
+										
+										<br>
+										<label for="trans_lim">Transactions limit in tokens</label>
+										<input type="text" id="trans_lim">
+										<br>
+										<input type="submit" value="SUBMIT">
+									</div>
+								</div>
+	
+							</div>
+							
+
+						</div>
+						
+						<div class="tab-pane fade" id="logs">
+							<div class="clr"></div>
+							<div class="row filter">
+								<form action="" method="GET">
+									<label for="date_from">From:</label>
+									<input type="text" id="date_from">
+
+									<label for="date_to">To:</label>
+									<input type="text" id="date_to">
+
+									<span>Per page: </span>
+									<select class="form-control">
+									  <option>30 Items</option>
+									  <option>40 Items</option>
+									  <option>60 Items</option>
+									</select>
+
+
+									<input type="submit" value="FILTER">						
+								</form>
+							</div>
+
+							<div class="col-md-12">
+								<h3>Historic logs:<span class="glyphicon glyphicon-question-sign"></span></h3>
+								<div class="hist-tab">
+									<table>
+										<thead>
+											<tr>
+												
+												<th>Date & Time:</th>
+												<th>IP address:</th>
+												<th>Activity:</th>
+												
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>35.221.178.69</td>
+												<td>Logged in</td>
+											</tr>
+											
+										</tbody>	
+									</table>
+								</div>
+							</div>
+									
+							<nav aria-label="Page navigation" class="text-center">
+							  <ul class="pagination pagination-sm">
+							    <li>
+							      <a href="#" aria-label="Previous">
+							        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							      </a>
+							    </li>
+							    <li><a href="#">1</a></li>
+							    <li><a href="#">2</a></li>
+							    <li><a href="#">3</a></li>
+							    <li><a href="#">4</a></li>
+							    <li><a href="#">5</a></li>
+							    <li>
+							      <a href="#" aria-label="Next">
+							        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							      </a>
+							    </li>
+							  </ul>
+							</nav>
+						</div>
+
+					</div>
+					
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		cur_height = $('.bg-gr').height();
+		$('.sidebar').css('height', cur_height);
+	});
+
+	$('.close-warn').on('click', function(){
+		$(this).parent().slideToggle(250)
+	});
+	$('.close').on('click', function(){
+		$(this).parent().fadeOut(250)
+	});
+	$('.nav-button').on('click', function(){
+		$('.sidebar').slideToggle();
+	});
+</script>
+
+</body>
+</html>

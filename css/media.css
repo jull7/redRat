@@ -1,0 +1,160 @@
+/*==========  Desktop First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /**/
+  header .balance-wrap h5 {
+    font-size: 12px !important;
+    padding: 15px 0 !important; }
+  header .balance-wrap .cash-v {
+    padding: 0 3px !important;
+    margin: 0 4px !important;
+    font-size: 10px !important; }
+  header .user-btns a {
+    font-size: 13px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    border: none !important; }
+  header .user-btns .user-rec {
+    background-position: 19% 55%;
+    padding-left: 50px;
+    padding-right: 10px !important; }
+  header .user-btns .user {
+    padding-left: 5% !important;
+    padding-right: 2% !important; }
+  .sidebar {
+    display: none;
+    height: 186px !important; }
+  .sidebar .col-md-11 .side_mnu {
+    padding-bottom: 0 !important; }
+  .sidebar .col-md-11 .side_mnu li {
+    background-position: 25px 50%; }
+  .sidebar .col-md-11 .side_mnu li a {
+    line-height: 40px !important;
+    padding: 0 18px 0 70px; }
+  .sidebar .col-md-11 .side_mnu-abs {
+    position: relative !important; }
+  .sidebar .col-md-11 .side_mnu-abs li {
+    display: block;
+    background-position: 25px 50%; }
+  .sidebar .col-md-11 .side_mnu-abs li#log_out {
+    border: none !important; }
+  .sidebar .col-md-11 .side_mnu-abs li a {
+    line-height: 50px !important;
+    padding: 0 18px 0 70px; }
+  .col-md-9 {
+    padding-left: 15px !important; }
+  .col-md-9 .main-cont {
+    min-height: 0px !important; }
+  #settings .bl-cont {
+    border: none !important; } }
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  /*Disable Animation on Mobile Devices*/
+  .animated {
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important; }
+  .tap {
+    font-family: Roboto, sans-serif; }
+  .tap ul li a {
+    font-size: 13px; }
+  .main-cont .tab-content #info a, .main-cont .tab-content #settings a {
+    margin-right: 15px !important;
+    margin-top: 10px !important; }
+  .main-cont .tab-content #info label, .main-cont .tab-content #info p, .main-cont .tab-content #settings label, .main-cont .tab-content #settings p {
+    margin: 12px 0 !important; }
+  .main-cont .tab-content #info p, .main-cont .tab-content #settings p {
+    margin-right: 10px !important; }
+  .main-cont .tab-content #trans h3 {
+    font-size: 16px !important; }
+  .main-cont .tab-content #trans .trans-tab table {
+    margin: 0 !important;
+    font-size: 13px; }
+  .main-cont .tab-content #trans .trans-tab table thead td {
+    height: 40px !important; }
+  .main-cont .tab-content #trans .trans-tab table tbody td span.glyphicon {
+    font-size: 12px !important; }
+  .main-cont input[type="submit"] {
+    margin: 10px 0 0 0 !important;
+    height: 25px !important;
+    width: 80px !important; }
+  .main-cont-addr .addr-tab table {
+    margin: 0 0 20px !important; }
+  .main-cont-addr .addr-tab table thead td {
+    height: 40px !important; }
+  .main-cont-addr .addr-tab table tr td {
+    font-size: em(14px);
+    border-bottom: 1px solid rgba(213, 213, 213, 0.3);
+    padding: 15px; }
+  .main-cont-addr .addr-tab table thead td {
+    color: #9a9a9a;
+    height: 60px; }
+  .main-cont-addr .addr-tab .add_new input {
+    margin: 0 5px 0 0 !important; }
+  .main-cont-addr .addr-tab #add_addr {
+    margin: 10px 0 0 0 !important;
+    width: 40px !important; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /**/
+  header .balance-wrap .cash-v {
+    margin: 0 !important; }
+  header .user-btns a {
+    font-size: 12px !important;
+    overflow: hidden !important; }
+  header .user-btns a span {
+    opacity: 0; }
+  header .user-btns .user-rec {
+    background-position: 50% 50% !important;
+    padding-left: 10px !important;
+    padding-left-padding-right: 10px !important; }
+  .main-cont .tab-content #trans .trans-tab table {
+    font-size: 11px; } }
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/ }
+
+/*==========  Mobile First Method  ==========*/
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /**/ }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  /**/ }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /**/ }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  /**/
+  .sidebar {
+    display: block !important; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  /**/ }

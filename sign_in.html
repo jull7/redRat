@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dashboard</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+
+<body>
+<div class="wpr_sign_in">
+	<div class="container">
+		<div class="row">
+			<div class="sign_in">
+			<form action="">
+				
+				<h3>Log in</h3>
+				<h4>to your account</h4>
+				
+				<input type="text" id="email" placeholder="Email">
+					
+				<input type="text" id="pass" placeholder="Password">
+
+				<input type="submit" value="SIGN IN">
+
+				<p>Do you have account? <a href="/">Sign up</a></p>
+				<p>Forget your  account password? <a href="/"> Recover</a></p>
+			</form>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		cur_height = $('.bg-gr').height();
+		$('.sidebar').css('height', cur_height);
+	});
+
+</script>
+
+</body>
+</html>

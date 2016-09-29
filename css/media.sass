@@ -1,0 +1,237 @@
+// @media (min-width: 1366px)
+// 	.container
+// 		width: 1336px
+
+// @media (min-width: 1440px)
+// 	.container
+// 		width: 1410px
+// @media (min-width: 1280px)
+// 	.container
+// 		width: 100%
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+	header
+		.balance-wrap
+			h5
+				font-size: 12px !important
+				padding: 15px 0 !important
+			.cash-v
+				padding: 0 3px !important
+				margin: 0 4px !important
+				font-size: 10px !important
+		.user-btns
+			a
+				font-size: 13px !important
+				padding-top: 12px !important
+				padding-bottom: 12px !important
+				border: none !important
+			.user-rec
+				background-position: 19% 55%
+				padding-left: 50px
+				padding-right: 10px !important
+			.user
+				padding-left: 5% !important
+				padding-right: 2% !important
+	
+	.sidebar
+		display: none
+		height: 186px !important
+		.col-md-11
+			.side_mnu	
+				padding-bottom: 0 !important
+				li
+					background-position: 25px 50%
+					a
+						line-height: 40px !important
+						padding: 0 18px 0 70px
+			.side_mnu-abs
+				position: relative !important
+				li
+					display: block
+					background-position: 25px 50%
+					&#log_out
+						border: none !important
+					a
+						line-height: 50px !important
+						padding: 0 18px 0 70px
+	.col-md-9
+		padding-left: 15px !important
+		.main-cont
+			min-height: 0px !important
+	#settings
+		.bl-cont
+			border: none !important
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+	.tap
+			font-family: Roboto, sans-serif
+			// height: 60px
+			// line-height: 60px
+			// border-bottom: 1px solid rgba(213,213,213,0.4)
+			ul
+				li
+					a
+						font-size: 13px
+	.main-cont
+		.tab-content
+			#info, #settings
+				a
+					margin-right: 15px !important
+					margin-top: 10px !important
+				label, p
+					margin: 12px 0 !important
+				p
+					margin-right: 10px !important
+				textarea
+			#trans
+				h3
+					font-size: 16px !important
+				.trans-tab
+					table
+						margin: 0 !important
+						font-size: 13px
+						thead
+							td
+								height: 40px !important
+						tbody
+							td
+								span.glyphicon
+									font-size: 12px !important
+						
+
+		input[type="submit"]
+			margin: 10px 0 0 0 !important
+			height: 25px !important
+			width: 80px !important
+	.main-cont-addr
+		h3
+			span
+		.addr-tab
+			table
+				margin: 0 0 20px !important
+				thead
+					td
+						height: 40px !important
+				tr
+					td
+						font-size: em(14px)
+						border-bottom: 1px solid rgba(213,213,213,0.3)
+						padding: 15px
+				// & :first-child
+				// 	width: 20%
+				// & :last-child
+				// 	width: 80%
+				thead
+					td
+						color: #9a9a9a
+						height: 60px
+			.add_new
+				input
+					margin: 0 5px 0 0 !important
+					// margin-right: 5px !important
+			#add_addr
+				input[type="submit"]
+				margin: 10px 0 0 0 !important
+				// height: 25px !important
+				width: 40px !important
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	header
+		.balance-wrap
+			.cash-v
+				margin: 0 !important
+
+		.col-xs-6
+		.balance-wrap
+			h5
+				// font-size: 10px !important
+			
+		.user-btns
+			a
+				font-size: 12px !important
+				overflow: hidden !important
+				span
+					opacity: 0
+			.user-rec
+				background-position: 50% 50% !important
+				padding-left: 10px !important
+ 				padding-right: 10px !important
+ 				// height: 39px !important
+	.main-cont
+		.tab-content
+			#info, #settings
+				a
+					
+				label, p
+					
+			#trans
+				.trans-tab
+					table
+						font-size: 11px
+	
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+	.sidebar
+		display: block !important
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

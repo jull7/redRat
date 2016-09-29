@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Dashboard</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+
+</head>
+
+<body>
+<div class="wpr">
+	<div class="receive-popup col-md-3">
+		<h4>Receive</h4>
+		<h5>Address of your wallet:</h5>
+		<p>0x13a10704684537a56b0fb266b74d9c590d7b2294</p>
+		<img src="" alt="">
+		<br>
+		<span class="close">CLOSE</span>
+
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<header>
+
+				<div class="nav-button hidden-md hidden-lg "><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+				<div class="col-xs-12 col-sm-12 col-md-2">
+					<div class="logo"></div>
+				</div>
+				<div class="col-xs-7 col-sm-6 col-md-offset-1 col-md-4">
+					<div class="balance-wrap">
+						<h5>YOUR BALANCE <span>134,725633</span></h5>
+						<div class="cash-v">EZC</div>
+					</div>
+				</div>
+				<div class="col-xs-5 col-sm-6 col-md-offset-1 col-md-4">
+					<div class="user-btns">
+						<a href="" class="user">John Doe</a>
+						<a href="" class="user-rec active"><span>Recieve</span></a>
+					</div>
+				</div>
+			</header>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row bg-gr">
+			<div class="col-md-3 sidebar">
+				
+				<div class="col-md-11">
+					
+						<ul class="side_mnu">	
+							<li class="active" id="dash"><a href="index.html">Dashboard</a></li>
+							<li id="transact_hist"><a href="transact.html">Transaction history</a></li>
+							<li id="profile"><a href="profile.html">My Profile</a></li>
+							<li id="address_book"><a href="address_book.html">Address book</a></li>
+						</ul>
+
+
+
+						<ul class="side_mnu-abs">
+							<li id="log_out"><a href="/">Log out</a></li>
+						</ul>
+					
+					
+				</div>
+				
+			</div>
+	
+			<div class="col-md-9">
+				<div class="main-cont">
+					<div class="col-md-12">
+						<div class="row tap">
+							
+								<ul class="nav nav-tabs" id="tabs">
+									<li class="active"><a href="#info" data-toggle="tab">INFORMATION</a></li>
+									<li><a href="#trans" data-toggle="tab">TRANSACTION HISTORY</a></li>
+								</ul>
+
+						</div>
+					</div>
+
+					<!-- <div class="clr"></div> -->
+					
+					<div class="tab-content">
+						<div class="tab-pane fade in active" id="info">
+							
+							<div class="clr"></div>
+							
+							<div class="row">
+								<div class="col-md-12">
+									<div class="warning">
+										<h5>Warning!</h5>
+										<p>Anti Money Laundering (AML) / Know Your Client (KYC) documents have not been provided or have not been verified. Untill such time that youprovided satisfactory AML/KYS documentation, you may only deposit, withraw and trade Digital Currencies.</p>
+										<div class="close-warn">&times;</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-md-8">
+									<h4>My address</h4>
+									<p>0xa00fa22499478cc37beb45021a1f1c9f826f72e1</p>
+									<input type="submit" value="COPY">
+									<div class="clr"></div>
+									<a href="/">See address QR code</a>
+									<a href="/">Set up Netki nickname</a>
+								</div>	
+							</div>
+							<div class="row">
+								<div class="col-md-9">
+									<h4>Send</h4>
+									
+									<label for="recep">Recepient<span class="glyphicon glyphicon-question-sign"></span></label><br />
+										<input type="text" id="recep" placeholder="Ethereum, Netki address or a name from your Address book">
+										<input type="submit" value="SCAN QR">
+									<div class="detail-row">
+										<div id="amount-wr">
+											<label for="amount">Amount<span class="glyphicon glyphicon-question-sign"></span></label>
+											<br />
+											<input type="text" id="amount">
+										</div>
+										
+										<div id="feep-wr">
+											<label for="fee">Fee</label>
+											<br />
+											<input type="text" id="fee_p">
+										</div>
+											
+										<div id="total-wr">
+											<label for="total">Total</label>
+											<br />
+											<input type="text" id="total">
+										</div>
+										
+									</div>
+
+									<div class="clr"></div>
+									
+									<p>Comment<span class="glyphicon glyphicon-question-sign"></span></p>
+									<textarea class="form-control" rows="4" placeholder="Comment will be sent with your transaction and will be publicly avaliable"></textarea>
+
+								</div>
+							</div>
+							
+							<input type="submit" value="SEND">
+
+						</div>
+						
+						<div class="tab-pane fade" id="trans">
+							<div class="clr"></div>
+							<div class="row filter">
+								<form action="" method="GET">
+									<label for="date_from">From:</label>
+									<input type="text" id="date_from">
+
+									<label for="date_to">To:</label>
+									<input type="text" id="date_to">
+									
+									<span>Per page: </span>
+									<select class="form-control">
+									  <option>30 Items</option>
+									  <option>40 Items</option>
+									  <option>60 Items</option>
+									</select>
+
+
+									<input type="submit" value="FILTER">						
+								</form>
+							</div>
+
+							<div class="col-md-12">
+								<h3>Last Transactions:<span class="glyphicon glyphicon-question-sign"></span></h3>
+								<div class="trans-tab">
+									<table>
+										<thead>
+											<tr>
+												
+												<td>Date:</td>
+												<td>Status:</td>
+												<td>Description:</td>
+												<td>Amount:</td>
+												<td>Fee:</td>
+												<td>Full info:</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>In Progress</td>
+												<td class="red-col">Bought 14.884322 EZC</td>
+												<td>+14.884356 EZC</td>
+												<td>14.882345 EZC</td>
+												<td><span class="glyphicon glyphicon-question-glyphicon glyphicon-info-sign"></span></td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>In Progress</td>
+												<td class="red-col">Bought 14.884322 EZC</td>
+												<td>+14.884356 EZC</td>
+												<td>14.882345 EZC</td>
+												<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>In Progress</td>
+												<td class="red-col">Bought 14.884322 EZC</td>
+												<td>+14.884356 EZC</td>
+												<td>14.882345 EZC</td>
+												<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>In Progress</td>
+												<td class="red-col">Bought 14.884322 EZC</td>
+												<td>+14.884356 EZC</td>
+												<td>14.882345 EZC</td>
+												<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>In Progress</td>
+												<td class="red-col">Bought 14.884322 EZC</td>
+												<td>+14.884356 EZC</td>
+												<td>14.882345 EZC</td>
+												<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											</tr>
+											<tr>
+												<td>11 June, 18:55</td>
+												<td>In Progress</td>
+												<td class="red-col">Bought 14.884322 EZC</td>
+												<td>+14.884356 EZC</td>
+												<td>14.882345 EZC</td>
+												<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+									
+							<nav aria-label="Page navigation" class="text-center">
+							  <ul class="pagination pagination-sm">
+							    <li>
+							      <a href="#" aria-label="Previous">
+							        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							      </a>
+							    </li>
+							    <li><a href="#">1</a></li>
+							    <li><a href="#">2</a></li>
+							    <li><a href="#">3</a></li>
+							    <li><a href="#">4</a></li>
+							    <li><a href="#">5</a></li>
+							    <li>
+							      <a href="#" aria-label="Next">
+							        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							      </a>
+							    </li>
+							  </ul>
+							</nav>
+						</div>
+
+					</div>
+					
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		cur_height = $('.bg-gr').height();
+		$('.sidebar').css('height', cur_height);
+	});
+
+	$('.close-warn').on('click', function(){
+		$(this).parent().slideToggle(250)
+	});
+	$('.close').on('click', function(){
+		$(this).parent().fadeOut(250)
+	});
+	$('.nav-button').on('click', function(){
+		$('.sidebar').slideToggle(400);
+	});
+	// $('.nav-button').on('click', function(){
+	// 	$('.sidebar').animate();
+	// });
+</script>
+
+</body>
+</html>
