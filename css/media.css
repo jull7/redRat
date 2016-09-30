@@ -27,7 +27,7 @@
     padding-right: 2% !important; }
   .sidebar {
     display: none;
-    height: 186px !important; }
+    height: 226px !important; }
   .sidebar .col-md-11 .side_mnu {
     padding-bottom: 0 !important; }
   .sidebar .col-md-11 .side_mnu li {
@@ -74,28 +74,26 @@
     -o-animation: none !important;
     -ms-animation: none !important;
     animation: none !important; }
-  .tap {
-    font-family: Roboto, sans-serif; }
   .tap ul li a {
     font-size: 13px; }
-  .main-cont .tab-content #info a, .main-cont .tab-content #settings a {
+  .main-cont #info a, .main-cont #settings a {
     margin-right: 15px !important;
     margin-top: 10px !important; }
-  .main-cont .tab-content #info label, .main-cont .tab-content #info p, .main-cont .tab-content #settings label, .main-cont .tab-content #settings p {
+  .main-cont #info label, .main-cont #info p, .main-cont #settings label, .main-cont #settings p {
     margin: 12px 0 !important; }
-  .main-cont .tab-content #info p, .main-cont .tab-content #settings p {
+  .main-cont #info p, .main-cont #settings p {
     margin-right: 10px !important; }
-  .main-cont .tab-content #trans h3 {
+  .main-cont #trans h3 {
     font-size: 16px !important; }
-  .main-cont .tab-content #trans .trans-tab table {
+  .main-cont #trans .trans-tab table {
     margin: 0 !important;
     font-size: 13px; }
-  .main-cont .tab-content #trans .trans-tab table thead td {
+  .main-cont #trans .trans-tab table thead td {
     height: 40px !important; }
-  .main-cont .tab-content #trans .trans-tab table tbody td span.glyphicon {
+  .main-cont #trans .trans-tab table tbody td span.glyphicon {
     font-size: 12px !important; }
-  .main-cont input[type="submit"] {
-    margin: 10px 0 0 0 !important;
+  input[type="submit"] {
+    margin: 10px 0px !important;
     height: 25px !important;
     width: 80px !important; }
   .main-cont-addr .addr-tab table {
@@ -129,7 +127,7 @@
     background-position: 50% 50% !important;
     padding-left: 10px !important;
     padding-left-padding-right: 10px !important; }
-  .main-cont .tab-content #trans .trans-tab table {
+  .main-cont #trans .trans-tab table {
     font-size: 11px; } }
 
 /* Custom, iPhone Retina */

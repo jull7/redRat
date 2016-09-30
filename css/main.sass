@@ -126,7 +126,7 @@ input[type="submit"]
 				display: block
 			&:hover
 				cursor: pointer
-
+				color: #f44336
 		.logo
 			width: 120px
 			height: 45px
@@ -259,9 +259,6 @@ input[type="submit"]
 		min-height: 600px
 		box-shadow: 0 1px 2px rgba(213,213,213,0.9)
 		background-color: #FFF
-		
-
-
 		.tap
 			ul
 				margin: 0
@@ -315,6 +312,8 @@ input[type="submit"]
 					z-index: 10
 			h3
 				color: #f44336
+				// padding-bottom: 10px
+				// border-bottom: 1px solid #DADADA
 			h4
 				margin-top: 30px
 			label, p
@@ -498,12 +497,38 @@ input[type="submit"]
 			padding: 0 15px
 			.bl-cont
 				border-right: 1px solid rgba(213,213,213,0.3)
-				input[type="submit"]
+				label, .rel_p
 					margin: 15px 0
-
+					color: #9a9a9a
+				.rel_p
+					position: relative
+				input
+					float: right
+					margin: 15px 8% 0
+					width: 55%
+					color: #000
+					// text-align: center
+					padding: 0 15px
+					&#pass, &#n_pass, &#rep_pass
+						width: 40%
+					&#trans_lim
+						float: left
+						width: 43%
+						margin: 0
+				input[type="submit"]
+					font-family: RobotoMedium
+					float: none
+					margin: 15px 0 
+					padding: 0
+					width: 120px
+					color: #FFF
 				input[type="checkbox"]
 					position: absolute
-					right: -40px
+					display: block
+					right: -100px
+					top: -10px
+					outline: none
+
 			.n-bord
 				border: none
 	.main-cont-addr

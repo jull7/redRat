@@ -56,6 +56,7 @@
 				<div class="col-md-11">
 					<ul class="side_mnu">
 						<li class="active" id="dash"><a href="index.html">Dashboard</a></li>
+						<li id="transact_hist"><a href="transact.html">Transaction history</a></li>
 						<li id="profile"><a href="profile.html">My Profile</a></li>
 						<li id="address_book"><a href="address_book.html">Address book</a></li>					
 					</ul>
@@ -132,13 +133,13 @@
 										<h4>Change password</h4>
 										
 										<label for="pass">Old password</label>
-										<input type="text" id="pass">
+										<input type="password" id="pass">
 										<br>
 										<label for="n_pass">New password</label>
-										<input type="text" id="n_pass">
+										<input type="password" id="n_pass">
 										<br>
-										<label for="rep_pass">Repeat new password</label>
-										<input type="text" id="rep_pass">
+										<label for="rep_pass">Repeat password</label>
+										<input type="password" id="rep_pass">
 										<br>
 										<input type="submit" value="SUBMIT">
 									</div>
@@ -153,8 +154,9 @@
 										
 										<br>
 										<label for="trans_lim">Transactions limit in tokens</label>
-										<input type="text" id="trans_lim">
 										<br>
+										<input type="text" id="trans_lim">
+										<div class="clr"></div>
 										<input type="submit" value="SUBMIT">
 									</div>
 								</div>
