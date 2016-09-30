@@ -83,14 +83,11 @@
 							<div class="clr"></div>
 							<div class="row filter">
 								<form action="" method="GET">
-									<div class="input-daterange">
-										<label for="date_from">From:</label>
-										<input type="text" id="date_from" name="date" class="datepicker">
+									<label for="date_from">From:</label>
+									<input type="text" id="date_from" name="date" class="datepicker">
 
-										<label for="date_to">To:</label>
-										<input type="text" id="date_to" name="date" class="datepicker">
-										
-									</div>
+									<label for="date_to">To:</label>
+									<input type="text" id="date_to" name="date" class="datepicker">
 									
 									<span>Per page: </span>
 									<select class="form-control">
@@ -218,15 +215,9 @@
 	$('.nav-button').on('click', function(){
 		$('.sidebar').slideToggle(400);
 	});
-	$('#date_from, #date_to').datepicker({
-		format: "dd.mm.yyyy",
-		autoclose: true
+	$('.datepicker').datepicker({
+		format: 'dd.mm.yyyy'
 	});
-
-	// .on('change', function(){
- //        $('.datepicker').hide();
- //    });
-
 </script>
 
 </body>
