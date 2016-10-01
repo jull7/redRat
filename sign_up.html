@@ -4,12 +4,12 @@
 
 	<meta charset="utf-8">
 
-	<title>Dashboard</title>
+	<title>Sign up</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/forms_style.css">
 	
 
 </head>
@@ -24,14 +24,24 @@
 				<h3>Sign up</h3>
 			
 					<input type="text" id="name" placeholder="Name">
+					<p class="warn_p">InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid
+				InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid</p>
 					
 					<input type="text" id="last_name" placeholder="Last name">
+					<p class="warn_p">InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid
+				InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid</p>
 					
 					<input type="text" id="email" placeholder="Email">
+					<p class="warn_p">InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid
+				InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid</p>
 					
 					<input type="text" id="pass" placeholder="Password">
+					<p class="warn_p">InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid
+				InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid</p>
 
-					<input type="text" id="rep_pass" placeholder="Repeat password">
+					<input type="text" id="rep_pass" placeholder="Repeat password" >
+					<p class="warn_p">InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid
+				InvalidInvalidInvalidInvalidInvalidInvalidInvalidInvalid</p>
 					
 					<select name="country" id="country" placeholder="Country" class="form-control">
 						<option value="1">Ukraine</option>
@@ -43,7 +53,7 @@
 						<input type="checkbox" id="check_terms">
 						<p>Accept <a href="">terms of service</a> and <a href="/">privacy policy</a></p>
 					</div>
-					<input type="submit" value="SIGN UP">
+					<input type="submit" value="SIGN UP" class="sign_form_bt">
 			</form>
 			</div>
 		</div>
@@ -52,13 +62,6 @@
 		
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
-<script>
-	$(document).ready(function(){
-		cur_height = $('.bg-gr').height();
-		$('.sidebar').css('height', cur_height);
-	});
-
-</script>
 
 </body>
 </html>

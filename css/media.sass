@@ -36,7 +36,7 @@
 				padding-bottom: 12px !important
 				border: none !important
 			.user-rec
-				background-position: 19% 55%
+				background-position: 19% 50%
 				padding-left: 50px
 				padding-right: 10px !important
 			.user
@@ -119,14 +119,14 @@
 					margin: 0 !important
 					font-size: 13px
 					thead
-						td
+						th
 							height: 40px !important
 					tbody
 						td
 							span.glyphicon
 								font-size: 12px !important
-					
-
+	.tab-wpr
+		font-size: 12px		
 	input[type="submit"]
 		margin: 10px 0px !important
 		height: 25px !important
@@ -135,24 +135,7 @@
 		h3
 			span
 		.addr-tab
-			table
-				margin: 0 0 20px !important
-				thead
-					td
-						height: 40px !important
-				tr
-					td
-						font-size: em(14px)
-						border-bottom: 1px solid rgba(213,213,213,0.3)
-						padding: 15px
-					// & :first-child
-					// 	width: 20%
-					// & :last-child
-					// 	width: 80%
-				thead
-					td
-						color: #9a9a9a
-						height: 60px
+
 			.add_new
 				input
 					margin: 0 5px 0 0 !important
@@ -162,45 +145,91 @@
 				margin: 10px 0 0 0 !important
 				height: 33px !important
 				width: 20% !important
+.sign_form_bt
+	// width: 100% !important
 
+
+@media only screen and (max-width : 540px)
+	.d-tbody
+		.row
+			.col-md-3
+				span
+					top: 35px !important
+					right: 20px !important
+			.col-md-9
+				span.glyphicon-edit
+					top: 35px !important
+					right: 45px !important
+				span.glyphicon-remove
+					top: 35px !important
+					right: 25px !important
+	.sent-popup
+		width: 300px !important
+	.to_nxt_to
+		display: block
+
+@media only screen and (max-width : 655px)
+	.to_nxt_l
+		display: block
+		
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
 	header
 		.balance-wrap
+			#your
+				display: none
 			.cash-v
 				margin: 0 !important
+				padding: 0px !important
+				font-size: 9px !important
 
 		.col-xs-6
 		.balance-wrap
 			h5
-				// font-size: 10px !important
+				// font-size: 11px !important
 			
 		.user-btns
 			a
-				font-size: 12px !important
+				font-size: 11px !important
+				padding-top: 13px !important
 				overflow: hidden !important
 				span
 					opacity: 0
-			.user-rec
-				background-position: 50% 50% !important
-				padding-left: 10px !important
- 				padding-right: 10px !important
- 				// height: 39px !important
+				&.user-rec
+					background-position: 50% 50% !important
+					padding-left: 10px !important
+	 				padding-right: 10px !important
+	 				height: 39px !important
+	 				width: 32px !important
+	.xs-pad
+		padding: 0
+		width: 38%	
+
+
 	.main-cont
 		#info, #settings
 			a
 				
-			label, p
+			p#my_addr_cab
+				// display: block				
 				
 		#trans
 			.trans-tab
 				table
 					font-size: 11px
 	
+	
 /* Custom, iPhone Retina */
-@media only screen and (max-width : 320px)
+@media only screen and (max-width : 330px)
 	/**/
+	#tabs
+		li
+			a#sett
+				font-size: 11px
+				width: 130px
+			a#log
+				font-size: 11px
 
 
 /*==========  Mobile First Method  ==========*/
@@ -216,28 +245,7 @@
 
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px)
-	/**/
-	// #settings
-	// 	.bl-cont
-	// 		label
-	// 			display: block !important
-	// 		input
-	// 			float: left
-	// 			margin: 0 auto !important
-	// 			width: 80% !important
-	// 			padding: 0 20px
-	// 			&#pass, &#n_pass, &#rep_pass
-	// 				width: 80% !important
-	// 			&#trans_lim
-	// 				float: left
-	// 				width: 43% !important
-	// 		input[type="submit"]
-	// 			float: none
-	// 			margin: 15px 0 
-	// 			padding: 0
-	// 			width: 120px
-	// 			color: #FFF
+
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px)
 	/**/

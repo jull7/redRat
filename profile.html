@@ -9,6 +9,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
 	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/datepicker/css/datepicker.css">
 	<link rel="stylesheet" href="css/main.css">
 	
 
@@ -22,7 +23,7 @@
 		<p>0x13a10704684537a56b0fb266b74d9c590d7b2294</p>
 		<img src="" alt="">
 		<br>
-		<span class="close">CLOSE</span>
+		<span class="close-bt">CLOSE</span>
 
 	</div>
 
@@ -31,15 +32,17 @@
 			<header>
 				<div class="nav-button hidden-md hidden-lg "><span class="glyphicon glyphicon-menu-hamburger"></span></div>
 				<div class="col-xs-12 col-md-2">
-					<div class="logo"></div>
+					<div class="logo">
+						<img src="img/ezcoin-logo.png" alt="">
+					</div>
 				</div>
 				<div class="col-xs-7 col-md-offset-1 col-md-4">
 					<div class="balance-wrap">
-						<h5>YOUR BALANCE <span>134,725633</span></h5>
+						<h5><span id="your">YOUR </span>BALANCE <span class="value">134,725633</span></h5>
 						<div class="cash-v">EZC</div>
 					</div>
 				</div>
-				<div class="col-xs-5 col-md-offset-1 col-md-4">
+				<div class="col-xs-5 col-md-offset-1 col-md-4 xs-pad">
 					<div class="user-btns">
 						<a href="" class="user">John Doe</a>
 						<a href="" class="user-rec active"><span>Recieve</span></a>
@@ -55,10 +58,10 @@
 				
 				<div class="col-md-11">
 					<ul class="side_mnu">
-						<li class="active" id="dash"><a href="index.html">Dashboard</a></li>
-						<li id="transact_hist"><a href="transact.html">Transaction history</a></li>
-						<li id="profile"><a href="profile.html">My Profile</a></li>
-						<li id="address_book"><a href="address_book.html">Address book</a></li>					
+						<li id="dash"><a href="index.html">Dashboard</a></li>
+						<li id="transact_hist"><a href="transaction_hist.html">Transaction history</a></li>
+						<li class="active" id="profile"><a href="profile.html">My Profile</a></li>
+						<li id="address_book"><a href="address_book.html">Address book</a></li>			
 					</ul>
 					<div class="clr"></div>
 
@@ -76,8 +79,8 @@
 						<div class="row tap">
 							
 								<ul class="nav nav-tabs" id="tabs">
-									<li class="active"><a href="#settings" data-toggle="tab">GENERAL SETTINGS</a></li>
-									<li><a href="#logs" data-toggle="tab">SESSION LOG</a></li>
+									<li class="active"><a id="sett" href="#settings" data-toggle="tab">GENERAL SETTINGS</a></li>
+									<li><a href="#logs" id="log" data-toggle="tab">SESSION LOG</a></li>
 								</ul>
 
 						</div>
@@ -101,46 +104,37 @@
 							</div>
 
 							<div class="row">
-								<div class="col-sm-12 col-md-4">
+								<div class="col-sm-7 col-md-4">
 									<div class="bl-cont">
 										<h4>Contact information</h4>
 										
-										<label for="email">Email*</label>
-										<input type="text" id="email">
-										<br>
-										<label for="mobile">Mobile*</label>
-										<input type="text" id="mobile">
-										<br>
-										<label for="name">Name*</label>
-										<input type="text" id="name">
-										<br>
-										<label for="last_name">Last name*</label>
-										<input type="text" id="last_name">
-										<br>
-										<label for="country">Country*</label>
-										<input type="text" id="country">
-										<br>
-										<label for="state">State</label>
-										<input type="text" id="state">
-										<br>
+										
+										<input type="text" id="email" placeholder="Email*">
+										
+										<input type="text" id="mobile" placeholder="Mobile*">
+									
+										<input type="text" id="name" placeholder="Name*">
+										
+										<input type="text" id="last_name" placeholder="Last name*">
+										
+										<input type="text" id="country" placeholder="Country*">
+										
+										<input type="text" id="state" placeholder="State">
+										
 										<input type="submit" value="SUBMIT">
 										
 									</div>
 								</div>
 
-								<div class="col-sm-12 col-md-4">
+								<div class="col-sm-7 col-md-4">
 									<div class="bl-cont">
 										<h4>Change password</h4>
+										<input type="password" id="pass" placeholder="Old password">
 										
-										<label for="pass">Old password</label>
-										<input type="password" id="pass">
-										<br>
-										<label for="n_pass">New password</label>
-										<input type="password" id="n_pass">
-										<br>
-										<label for="rep_pass">Repeat password</label>
-										<input type="password" id="rep_pass">
-										<br>
+										<input type="password" id="n_pass" placeholder="New password">
+										
+										<input type="password" id="rep_pass" placeholder="Repeat password">
+										
 										<input type="submit" value="SUBMIT">
 									</div>
 								</div>
@@ -170,101 +164,68 @@
 							<div class="clr"></div>
 							<div class="row filter">
 								<form action="" method="GET">
+								<div class="input-daterange">
 									<label for="date_from">From:</label>
-									<input type="text" id="date_from">
+									<input type="text" id="date_from" name="date" class="datepicker">
 
+									<div class="to_nxt_to"></div>
+									
 									<label for="date_to">To:</label>
-									<input type="text" id="date_to">
+									<input type="text" id="date_to" name="date" class="datepicker">
+									
+								</div>
+								<div class="to_nxt_l"></div>
+								<span>Per page: </span>
+								<select class="form-control">
+								  <option>30 Items</option>
+								  <option>40 Items</option>
+								  <option>60 Items</option>
+								</select>
 
-									<span>Per page: </span>
-									<select class="form-control">
-									  <option>30 Items</option>
-									  <option>40 Items</option>
-									  <option>60 Items</option>
-									</select>
 
-
-									<input type="submit" value="FILTER">						
-								</form>
+								<input type="submit" value="FILTER">						
+							</form>
 							</div>
 
 							<div class="col-md-12">
-								<h3>Historic logs:<span class="glyphicon glyphicon-question-sign"></span></h3>
+								<h3>Historic logs:<span class="glyphicon glyphicon-question-sign"  data-toggle="tooltip" data-placement="right" title="Help texttexttext text"></span></h3>
 								<div class="hist-tab">
-									<table>
-										<thead>
-											<tr>
-												
-												<th>Date & Time:</th>
-												<th>IP address:</th>
-												<th>Activity:</th>
-												
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											<tr>
-												<td>11 June, 18:55</td>
-												<td>35.221.178.69</td>
-												<td>Logged in</td>
-											</tr>
-											
-										</tbody>	
-									</table>
+									<div class="tab-wpr">
+									
+									<div class="d-thead">
+										<div class="row">
+											<div class="col-xs-4 col-sm-4 col-md-4">Date & Time:</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">IP address:</div><div class="col-xs-4 col-sm-4 col-md-4">Activity:</div>
+										</div>
+									</div>
+									<div class="d-tbody">
+										<div class="row">
+											<div class="col-xs-4 col-sm-4 col-md-4">11 June, 18:55</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">35.221.178.69</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">Logged in</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-4 col-sm-4 col-md-4">11 June, 18:55</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">35.221.178.69</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">Logged in</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-4 col-sm-4 col-md-4">11 June, 18:55</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">35.221.178.69</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">Logged in</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-4 col-sm-4 col-md-4">11 June, 18:55</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">35.221.178.69</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">Logged in</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-4 col-sm-4 col-md-4">11 June, 18:55</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">35.221.178.69</div>
+											<div class="col-xs-4 col-sm-4 col-md-4">Logged in</div>
+										</div>
+									</div>
+								</div>
 								</div>
 							</div>
 									
@@ -275,7 +236,7 @@
 							        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
 							      </a>
 							    </li>
-							    <li><a href="#">1</a></li>
+							    <li><a href="#" class="active">1</a></li>
 							    <li><a href="#">2</a></li>
 							    <li><a href="#">3</a></li>
 							    <li><a href="#">4</a></li>
@@ -301,6 +262,8 @@
 		
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="libs/datepicker/js/bootstrap-datepicker.js"></script>
+
 <script>
 	$(document).ready(function(){
 		cur_height = $('.bg-gr').height();
@@ -316,6 +279,50 @@
 	$('.nav-button').on('click', function(){
 		$('.sidebar').slideToggle();
 	});
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip();
+	});
+
+	$('.col-md-11').height($(window).height() - $('header').height());
+
+	// RECIEVE 
+
+	$('.user-rec').on('click', function(event){
+		$('.receive-popup').toggle();
+		event.preventDefault();
+	});
+
+	$('.close-bt').on('click', function(){
+		$(this).parent().toggle()
+	});
+
+
+</script>
+
+<script>
+	var nowTemp = new Date();
+	var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
+	 
+	var checkin = $('#date_from').datepicker({
+	  onRender: function(date) {
+	    return date.valueOf() < now.valueOf() ? 'disabled' : '';
+	  }
+	}).on('changeDate', function(ev) {
+	  if (ev.date.valueOf() > checkout.date.valueOf()) {
+	    var newDate = new Date(ev.date)
+	    newDate.setDate(newDate.getDate() + 1);
+	    checkout.setValue(newDate);
+	  }
+	  checkin.hide();
+	  $('#date_to')[0].focus();
+	}).data('datepicker');
+	var checkout = $('#date_to').datepicker({
+	  onRender: function(date) {
+	    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
+	  }
+	}).on('changeDate', function(ev) {
+	  checkout.hide();
+	}).data('datepicker');
 </script>
 
 </body>

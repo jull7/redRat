@@ -17,21 +17,30 @@
 
 <body>
 <div class="wpr">
+	<div class="receive-popup col-md-3">
+		<h4>Receive</h4>
+		<h5>Address of your wallet:</h5>
+		<p>0x13a10704684537a56b0fb266b74d9c590d7b2294</p>
+		<img src="" alt="">
+		<br>
+		<span class="close-bt">CLOSE</span>
 
+	</div>
 	<div class="container">
 		<div class="row">
 			<header>
 				<div class="nav-button hidden-md hidden-lg "><span class="glyphicon glyphicon-menu-hamburger"></span></div>
 				<div class="col-xs-12 col-md-2">
-					<div class="logo"></div>
+					<div class="logo">
+						<img src="img/ezcoin-logo.png" alt="">
+					</div>
 				</div>
 				<div class="col-xs-7 col-md-offset-1 col-md-4">
 					<div class="balance-wrap">
-						<h5>YOUR BALANCE <span>134,725633</span></h5>
-						<div class="cash-v">EZC</div>
+						<h5><span id="your">YOUR </span>BALANCE <span class="value">134,725633</span></h5>						<div class="cash-v">EZC</div>
 					</div>
 				</div>
-				<div class="col-xs-5 col-md-offset-1 col-md-4">
+				<div class="col-xs-5 col-md-offset-1 col-md-4 xs-pad">
 					<div class="user-btns">
 						<a href="" class="user">John Doe</a>
 						<a href="" class="user-rec active"><span>Recieve</span></a>
@@ -47,10 +56,10 @@
 				
 				<div class="col-md-11">
 					<ul class="side_mnu">
-						<li class="active" id="dash"><a href="index.html">Dashboard</a></li>
-						<li id="transact_hist"><a href="transact.html">Transaction history</a></li>
+						<li id="dash"><a href="index.html">Dashboard</a></li>
+						<li id="transact_hist"><a href="transaction_hist.html">Transaction history</a></li>
 						<li id="profile"><a href="profile.html">My Profile</a></li>
-						<li id="address_book"><a href="address_book.html">Address book</a></li>					
+						<li class="active" id="address_book"><a href="address_book.html">Address book</a></li>				
 					</ul>
 					<div class="clr"></div>
 
@@ -64,38 +73,39 @@
 	
 			<div class="col-md-9">
 				<div class="main-cont-addr">
-					<div class=" col-sm-10 col-md-9">
-						<h3>Address book: <span class="glyphicon glyphicon-question-sign"></span></h3>
+					<div class="col-sm-9 col-md-9">
+						<h3>Address book: <span class="glyphicon glyphicon-question-sign"  data-toggle="tooltip" data-placement="right" title="Help texttexttext text"></span></h3>
 							
 							<div class="addr-tab">
-								<table>
-									<thead>
-										<tr>
-											<th>Recipient:</th>
-											<th>Address:</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Albert</td>
-											<td>0xb5606469f317018d21f504 b6e1518b5606469 f317018d21f504b6e1518e54b23 fa761e54b23fa761</td>
-											<!-- <span class="glyphicon glyphicon-remove"></span></td> -->
-										</tr>
-										<tr>
-											<td>Mike</td>
-											<td>0xb5606469f317018d21f5 04b6e1518e54b23fa761</td>
-											<!-- <span class="glyphicon glyphicon-remove"></span></td> -->
-										</tr>
-										<tr>
-											<td>Tom</td>
-											<td>0xb5606469f317018d21f504b 6e1518e54b23fa761</td>
-											<!-- <span class="glyphicon glyphicon-remove"></span></td> -->
-										</tr>
-										
-									</tbody>
-								</table>
-	
-
+								<div class="tab-wpr">
+									
+									<div class="d-thead">
+										<div class="row">
+											<div class="col-xs-4 col-sm-3 col-md-3">Recipient:</div>
+											<div class="col-xs-8 col-sm-9 col-md-9">Address:</div>
+										</div>
+									</div>
+									<div class="d-tbody">
+										<div class="row">
+											<div class="col-xs-3 col-sm-3 col-md-3">Albert<span class="glyphicon glyphicon-edit"></span></div>
+											<div class="col-xs-9 col-sm-9 col-md-9"><p class="word-w">0xb5606469f317018d21f504b6e1518e54b23fa761</p><span class="glyphicon glyphicon-edit"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-3 col-sm-3 col-md-3">Albert<span class="glyphicon glyphicon-edit"></span></div>
+											<div class="col-xs-9 col-sm-9 col-md-9"><p class="word-w">0xb5606469f317018d21f504b6e1518e54b23fa761</p><span class="glyphicon glyphicon-edit"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-3 col-sm-3 col-md-3">Albert<span class="glyphicon glyphicon-edit"></span></div>
+											<div class="col-xs-9 col-sm-9 col-md-9"><p class="word-w">0xb5606469f317018d21f504b6e1518e54b23fa761</p><span class="glyphicon glyphicon-edit"></span>
+											<span class="glyphicon glyphicon-remove"></span>
+											</div>
+										</div>
+									</div>
+								</div>
 							<div class="add_new">
 								<input type="text" placeholder="Name" id="name">
 								<input type="text" placeholder="Address" id="address">
@@ -128,6 +138,25 @@
 	$('.nav-button').on('click', function(){
 		$('.sidebar').slideToggle();
 	});
+
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip();
+	});
+
+	$('.col-md-11').height($(window).height() - $('header').height());
+
+	// RECIEVE 
+
+	$('.user-rec').on('click', function(event){
+		$('.receive-popup').toggle();
+		event.preventDefault();
+	});
+
+	$('.close-bt').on('click', function(){
+		$(this).parent().toggle()
+	});
+
+
 </script>
 
 </body>
