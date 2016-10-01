@@ -47,7 +47,8 @@ input[type="submit"] {
     margin-bottom: 5px !important; }
   .wpr-res .warn_p, .conf_phone .warn_p, .wpr_sign_in .warn_p, .wpr_sign_up .warn_p {
     color: #f44336;
-    font-size: 12px; }
+    font-size: 12px;
+    display: none; }
   .wpr-res h3, .conf_phone h3, .wpr_sign_in h3, .wpr_sign_up h3 {
     font-size: 32px;
     color: #f44336;

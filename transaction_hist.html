@@ -34,8 +34,9 @@
 				<div class="nav-button hidden-md hidden-lg "><span class="glyphicon glyphicon-menu-hamburger"></span></div>
 				<div class="col-xs-12 col-sm-12 col-md-2">
 					<div class="logo">
-						<img src="img/ezcoin-logo.png" alt="">
-					</div>
+						<a href="/">
+							<img src="img/ezcoin-logo.png" alt="">
+						</a></div>
 				</div>
 				<div class="col-xs-7 col-sm-6 col-md-offset-1 col-md-4">
 					<div class="balance-wrap">
@@ -201,10 +202,11 @@
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="libs/datepicker/js/bootstrap-datepicker.js"></script>
 <script>
-	$(document).ready(function(){
-		cur_height = $('.bg-gr').height();
-		$('.sidebar').css('height', cur_height);
-	});
+	// $(document).ready(function(){
+	// 	cur_height = $('.bg-gr').height();
+	// 	$('.sidebar').css('height', cur_height);
+	// });
+	$('.sidebar').height($(window).height() - $('header').height());
 
 	$('.close-warn').on('click', function(){
 		$(this).parent().slideToggle(250)
@@ -233,8 +235,6 @@
 	$(function () {
 	  $('[data-toggle="tooltip"]').tooltip();
 	});
-
-	$('.col-md-11').height($(window).height() - $('header').height());
 
 </script>
 <script>

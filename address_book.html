@@ -32,12 +32,15 @@
 				<div class="nav-button hidden-md hidden-lg "><span class="glyphicon glyphicon-menu-hamburger"></span></div>
 				<div class="col-xs-12 col-md-2">
 					<div class="logo">
-						<img src="img/ezcoin-logo.png" alt="">
+						<a href="/">
+							<img src="img/ezcoin-logo.png" alt="">
+						</a>
 					</div>
 				</div>
 				<div class="col-xs-7 col-md-offset-1 col-md-4">
 					<div class="balance-wrap">
-						<h5><span id="your">YOUR </span>BALANCE <span class="value">134,725633</span></h5>						<div class="cash-v">EZC</div>
+						<h5><span id="your">YOUR </span>BALANCE <span class="value">134,725633</span></h5>
+						<div class="cash-v">EZC</div>
 					</div>
 				</div>
 				<div class="col-xs-5 col-md-offset-1 col-md-4 xs-pad">
@@ -124,10 +127,11 @@
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script>
-	$(document).ready(function(){
-		cur_height = $('.bg-gr').height();
-		$('.sidebar').css('height', cur_height);
-	});
+	// $(document).ready(function(){
+	// 	cur_height = $('.bg-gr').height();
+	// 	$('.sidebar').css('height', cur_height);
+	// });
+	$('.sidebar').height($(window).height() - $('header').height());
 
 	$('.close-warn').on('click', function(){
 		$(this).parent().slideToggle(250)
@@ -143,7 +147,6 @@
 	  $('[data-toggle="tooltip"]').tooltip();
 	});
 
-	$('.col-md-11').height($(window).height() - $('header').height());
 
 	// RECIEVE 
 
