@@ -4,7 +4,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Profile</title>
+	<title>My Profile</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
@@ -75,7 +75,7 @@
 				
 			</div>
 	
-			<div class="col-md-9">
+			<div class="col-md-9 contnr">
 				<div class="main-cont">
 					<div class="col-md-12">
 						<div class="row tap">
@@ -145,8 +145,8 @@
 									<div class="bl-cont n-bord">
 										<h4>Security Preferences</h4>
 										
-										<p class="rel_p">Enable/Disable Login <br>
-										OTP protection<input type="checkbox" id="secur_check"></p>
+										<p class="rel_p">Enable/Disable Login <input type="checkbox" id="secur_check"><br>
+										OTP protection</p>
 										
 										<br>
 										<label for="trans_lim">Transactions limit in tokens</label>
@@ -242,7 +242,8 @@
 							    <li><a href="#">2</a></li>
 							    <li><a href="#">3</a></li>
 							    <li><a href="#">4</a></li>
-							    <li><a href="#">5</a></li>
+							    <li><a href="#">...</a></li>
+							    <li><a href="#">99</a></li>
 							    <li>
 							      <a href="#" aria-label="Next">
 							        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
@@ -267,12 +268,16 @@
 <script type="text/javascript" src="libs/datepicker/js/bootstrap-datepicker.js"></script>
 
 <script>
-	// $(document).ready(function(){
-	// 	cur_height = $('.bg-gr').height();
-	// 	$('.sidebar').css('height', cur_height);
-	// });
-
-	$('.sidebar').height($(window).height() - $('header').height());
+		$(document).ready(function(){
+		if ($('.contnr').height() < $(window).height()) {
+			// $('.sidebar').height($(window).height() - $('header').height());
+			$('.bg-gr').height($(window).height() - $('header').height());
+		}
+		else {
+			// $('.sidebar').height($('.contnr').height());
+			$('.bg-gr').height($('.contnr').height());
+		}
+	});
 
 	$('.close-warn').on('click', function(){
 		$(this).parent().slideToggle(250)

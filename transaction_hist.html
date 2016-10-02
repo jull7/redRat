@@ -27,6 +27,25 @@
 
 	</div>
 
+	<div class="full-popup col-md-3">
+		<h4>Full Info</h4>
+		<h5>Status:</h5>
+		<p id="st">d</p>
+		<h5>Date:</h5>
+		<p id="dt">sd</p>
+		<h5>Fee:</h5>
+		<p id="fe">d</p>
+		<h5>Description:</h5>
+		<p id="desc">d</p>
+		<h5>Amount:</h5>
+		<p id="am">d</p>
+		<h5>Sender:</h5>
+		<h5>Transaction ID:</h5>
+		<div class="bt-wr">
+			<span class="back-bt">BACK</span>
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row">
 			<header>
@@ -75,7 +94,7 @@
 				
 			</div>
 	
-			<div class="col-md-9">
+			<div class="col-md-9 contnr">
 				<div class="main-cont">
 					<div id="trans">
 						<div class="row filter wt">
@@ -116,6 +135,7 @@
 											<th>Amount:</th>
 											<th>Fee:</th>
 											<th>Full info:</th>
+											<th></th>
 										</tr>
 									</thead>
 									<tbody>
@@ -125,7 +145,7 @@
 											<td class="red-col">Bought 14.884322 EZC</td>
 											<td>+14.884356 EZC</td>
 											<td>14.882345 EZC</td>
-											<td><span class="glyphicon glyphicon-question-glyphicon glyphicon-info-sign"></span></td>
+											<td><span class="glyphicon glyphicon-info-sign"></span></td><td></td>
 										</tr>
 										<tr>
 											<td>11 June, 18:55</td>
@@ -133,7 +153,7 @@
 											<td class="red-col">Bought 14.884322 EZC</td>
 											<td>+14.884356 EZC</td>
 											<td>14.882345 EZC</td>
-											<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											<td><span class="glyphicon glyphicon-info-sign"></span></td><td></td>
 										</tr>
 										<tr>
 											<td>11 June, 18:55</td>
@@ -141,7 +161,7 @@
 											<td class="red-col">Bought 14.884322 EZC</td>
 											<td>+14.884356 EZC</td>
 											<td>14.882345 EZC</td>
-											<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											<td><span class="glyphicon glyphicon-info-sign"></span></td><td></td>
 										</tr>
 										<tr>
 											<td>11 June, 18:55</td>
@@ -149,7 +169,7 @@
 											<td class="red-col">Bought 14.884322 EZC</td>
 											<td>+14.884356 EZC</td>
 											<td>14.882345 EZC</td>
-											<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											<td><span class="glyphicon glyphicon-info-sign"></span></td><td></td>
 										</tr>
 										<tr>
 											<td>11 June, 18:55</td>
@@ -157,7 +177,7 @@
 											<td class="red-col">Bought 14.884322 EZC</td>
 											<td>+14.884356 EZC</td>
 											<td>14.882345 EZC</td>
-											<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											<td><span class="glyphicon glyphicon-info-sign"></span></td><td></td>
 										</tr>
 										<tr>
 											<td>11 June, 18:55</td>
@@ -165,7 +185,7 @@
 											<td class="red-col">Bought 14.884322 EZC</td>
 											<td>+14.884356 EZC</td>
 											<td>14.882345 EZC</td>
-											<td><span class="glyphicon glyphicon-info-sign"></span></td>
+											<td><span class="glyphicon glyphicon-info-sign"></span></td><td></td>
 										</tr>
 									</tbody>
 								</table>
@@ -183,7 +203,8 @@
 							    <li><a href="#">2</a></li>
 							    <li><a href="#">3</a></li>
 							    <li><a href="#">4</a></li>
-							    <li><a href="#">5</a></li>
+							    <li><a href="#">...</a></li>
+							    <li><a href="#">99</a></li>
 							    <li>
 							      <a href="#" aria-label="Next">
 							        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
@@ -202,11 +223,16 @@
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="libs/datepicker/js/bootstrap-datepicker.js"></script>
 <script>
-	// $(document).ready(function(){
-	// 	cur_height = $('.bg-gr').height();
-	// 	$('.sidebar').css('height', cur_height);
-	// });
-	$('.sidebar').height($(window).height() - $('header').height());
+	$(document).ready(function(){
+		if ($('.contnr').height() < $(window).height()) {
+			// $('.sidebar').height($(window).height() - $('header').height());
+			$('.bg-gr').height($(window).height() - $('header').height());
+		}
+		else {
+			// $('.sidebar').height($('.contnr').height());
+			$('.bg-gr').height($('.contnr').height());
+		}
+	});
 
 	$('.close-warn').on('click', function(){
 		$(this).parent().slideToggle(250)
@@ -234,6 +260,22 @@
 
 	$(function () {
 	  $('[data-toggle="tooltip"]').tooltip();
+	});
+
+	// FULL INFO
+	$('.glyphicon-info-sign').on('click', function(){
+		$rowdata = $(this).parent().parent().find('td');
+
+			$('.full-popup>#dt').text($rowdata[0].innerHTML);
+			$('.full-popup>#st').text($rowdata[1].innerHTML);
+			$('.full-popup>#desc').text($rowdata[2].innerHTML);
+			$('.full-popup>#am').text($rowdata[3].innerHTML);
+			$('.full-popup>#fe').text($rowdata[4].innerHTML);
+		$('.full-popup').toggle();
+	});
+
+	$('.back-bt').on('click', function(){
+		$(this).parent().parent().toggle()
 	});
 
 </script>
