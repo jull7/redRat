@@ -81,8 +81,8 @@
 						<div class="row tap">
 							
 								<ul class="nav nav-tabs" id="tabs">
-									<li class="active"><a id="sett" href="#settings" data-toggle="tab">GENERAL SETTINGS</a></li>
-									<li><a href="#logs" id="log" data-toggle="tab">SESSION LOG</a></li>
+									<li id="log" class="active"><a href="#logs" data-toggle="tab">SESSION LOG</a></li>
+									<li id="sett"><a href="#settings" data-toggle="tab">GENERAL SETTINGS</a></li>
 								</ul>
 
 						</div>
@@ -91,78 +91,8 @@
 					<!-- <div class="clr"></div> -->
 					
 					<div class="tab-content">
-						<div class="tab-pane fade in active" id="settings">
-							
-							<div class="clr"></div>
-							
-							<div class="row">
-								<div class="col-md-12">
-									<div class="warning">
-										<h5>Warning!</h5>
-										<p>Anti Money Laundering (AML) / Know Your Client (KYC) documents have not been provided or have not been verified. Untill such time that youprovided satisfactory AML/KYS documentation, you may only deposit, withraw and trade Digital Currencies.</p>
-										<div class="close-warn">&times;</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="row">
-								<div class="col-sm-7 col-md-4">
-									<div class="bl-cont">
-										<h4>Contact information</h4>
-										
-										
-										<input type="text" id="email" placeholder="Email*">
-										
-										<input type="text" id="mobile" placeholder="Mobile*">
-									
-										<input type="text" id="name" placeholder="Name*">
-										
-										<input type="text" id="last_name" placeholder="Last name*">
-										
-										<input type="text" id="country" placeholder="Country*">
-										
-										<input type="text" id="state" placeholder="State">
-										
-										<input type="submit" value="SUBMIT">
-										
-									</div>
-								</div>
-
-								<div class="col-sm-7 col-md-4">
-									<div class="bl-cont">
-										<h4>Change password</h4>
-										<input type="password" id="pass" placeholder="Old password">
-										
-										<input type="password" id="n_pass" placeholder="New password">
-										
-										<input type="password" id="rep_pass" placeholder="Repeat password">
-										
-										<input type="submit" value="SUBMIT">
-									</div>
-								</div>
-								
-								<div class="col-sm-12 col-md-4">
-									<div class="bl-cont n-bord">
-										<h4>Security Preferences</h4>
-										
-										<p class="rel_p">Enable/Disable Login <input type="checkbox" id="secur_check"><br>
-										OTP protection</p>
-										
-										<br>
-										<label for="trans_lim">Transactions limit in tokens</label>
-										<br>
-										<input type="text" id="trans_lim">
-										<div class="clr"></div>
-										<input type="submit" value="SUBMIT">
-									</div>
-								</div>
-	
-							</div>
-							
-
-						</div>
 						
-						<div class="tab-pane fade" id="logs">
+						<div class="tab-pane fade in active" id="logs">
 							<div class="clr"></div>
 							<div class="row filter">
 								<form action="" method="GET">
@@ -253,6 +183,81 @@
 							</nav>
 						</div>
 
+						<div class="tab-pane fade" id="settings">
+							
+							<div class="clr"></div>
+							
+							<div class="row">
+								<div class="col-md-12">
+									<div class="warning">
+										<h5>Warning!</h5>
+										<p>Anti Money Laundering (AML) / Know Your Client (KYC) documents have not been provided or have not been verified. Untill such time that youprovided satisfactory AML/KYS documentation, you may only deposit, withraw and trade Digital Currencies.</p>
+										<div class="close-warn">&times;</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-7 col-md-4">
+									<div class="bl-cont">
+										<h4>Contact information</h4>
+										
+										
+										<input type="text" id="email" placeholder="Email*">
+										
+										<input type="text" id="mobile" placeholder="Mobile*">
+									
+										<input type="text" id="name" placeholder="Name*">
+										
+										<input type="text" id="last_name" placeholder="Last name*">
+										
+										<select name="country" id="country" placeholder="Country*" class="form-control">
+											<option value="1">Ukraine</option>
+											<option value="2">France</option>
+											<option value="3">Poland</option>
+										</select>
+										
+										<input type="text" id="state" placeholder="State">
+										
+										<input type="submit" value="SUBMIT">
+										
+									</div>
+								</div>
+
+								<div class="col-sm-7 col-md-4">
+									<div class="bl-cont">
+										<h4>Change password</h4>
+										<input type="password" id="pass" placeholder="Old password">
+										
+										<input type="password" id="n_pass" placeholder="New password">
+										
+										<input type="password" id="rep_pass" placeholder="Repeat password">
+										
+										<input type="submit" value="SUBMIT">
+									</div>
+								</div>
+								
+								<div class="col-sm-12 col-md-4">
+									<div class="bl-cont n-bord">
+										<h4>Security Preferences</h4>
+										
+										<p class="rel_p">Enable/Disable Login <input type="checkbox" id="secur_check"><br>
+										OTP protection</p>
+										
+										<br>
+										<label for="trans_lim">Transactions limit in tokens</label>
+										<br>
+										<input type="text" id="trans_lim">
+										<div class="clr"></div>
+										<input type="submit" value="SUBMIT">
+									</div>
+								</div>
+	
+							</div>
+							
+
+						</div>
+						
 					</div>
 					
 
@@ -262,19 +267,20 @@
 		</div>
 	</div>
 </div>
-		
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+
+<script
+		src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>		
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="libs/datepicker/js/bootstrap-datepicker.js"></script>
 
 <script>
-		$(document).ready(function(){
+	$(document).ready(function(){
 		if ($('.contnr').height() < $(window).height()) {
-			// $('.sidebar').height($(window).height() - $('header').height());
 			$('.bg-gr').height($(window).height() - $('header').height());
 		}
 		else {
-			// $('.sidebar').height($('.contnr').height());
 			$('.bg-gr').height($('.contnr').height());
 		}
 	});
@@ -331,6 +337,25 @@
 	}).on('changeDate', function(ev) {
 	  checkout.hide();
 	}).data('datepicker');
+</script>
+
+<script>
+
+	// disable another datepicket if one in focus
+
+	var fromDatePicker = $('.datepicker.dropdown-menu')[0];
+	var toDatePicker = $('.datepicker.dropdown-menu')[1];
+
+	$('#date_from').on('click', function(){
+		toDatePicker.style.display = 'none';
+		fromDatePicker.style.display = 'block';
+	});
+
+	$('#date_to').on('click', function(){
+		fromDatePicker.style.display = 'none';
+		toDatePicker.style.display = 'block';
+	});
+
 </script>
 
 </body>

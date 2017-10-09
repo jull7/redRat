@@ -28,6 +28,8 @@
   .sidebar {
     display: none;
     height: 226px !important; }
+  .sidebar .col-md-11 {
+    min-height: 226px !important; }
   .sidebar .col-md-11 .side_mnu {
     padding-bottom: 0 !important; }
   .sidebar .col-md-11 .side_mnu li {

@@ -219,17 +219,18 @@
 	</div>
 </div>
 		
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+<script
+		src="https://code.jquery.com/jquery-2.2.4.min.js"
+		integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+		crossorigin="anonymous"></script>
 <script type="text/javascript" src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="libs/datepicker/js/bootstrap-datepicker.js"></script>
 <script>
 	$(document).ready(function(){
 		if ($('.contnr').height() < $(window).height()) {
-			// $('.sidebar').height($(window).height() - $('header').height());
 			$('.bg-gr').height($(window).height() - $('header').height());
 		}
 		else {
-			// $('.sidebar').height($('.contnr').height());
 			$('.bg-gr').height($('.contnr').height());
 		}
 	});
@@ -296,6 +297,7 @@
 	  checkin.hide();
 	  $('#date_to')[0].focus();
 	}).data('datepicker');
+	
 	var checkout = $('#date_to').datepicker({
 	  onRender: function(date) {
 	    return date.valueOf() <= checkin.date.valueOf() ? 'disabled' : '';
@@ -303,6 +305,25 @@
 	}).on('changeDate', function(ev) {
 	  checkout.hide();
 	}).data('datepicker');
+
+</script>
+<script>
+
+	// disable another datepicket if one in focus
+
+	var fromDatePicker = $('.datepicker.dropdown-menu')[0];
+	var toDatePicker = $('.datepicker.dropdown-menu')[1];
+
+	$('#date_from').on('click', function(){
+		toDatePicker.style.display = 'none';
+		fromDatePicker.style.display = 'block';
+	});
+
+	$('#date_to').on('click', function(){
+		fromDatePicker.style.display = 'none';
+		toDatePicker.style.display = 'block';
+	});
+
 </script>
 
 </body>
